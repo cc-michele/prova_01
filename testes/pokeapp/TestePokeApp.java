@@ -27,43 +27,15 @@ public class TestePokeApp {
 	}
 
 	@Test
-	public void testMichele() throws Exception {
-		Pokemon mewtwo = new Pokemon("Mewtwo", 100, "Psiquico", 25);
-		Pokemon mewtwo2 = new Pokemon("Mewtwo", 100, "Psiquico", 25);
-		Pokemon giratina = new Pokemon("Giratina", 100, "Fantasma", 20);
-		Pokemon hooh = new Pokemon("Ho oh", 100, "Fogo", 28);
-
-		Treinador joaozinho = new Treinador("Joaozinho Hack");// huehueBR
-		joaozinho.captura(mewtwo);
-		joaozinho.captura(mewtwo2);
-		joaozinho.captura(giratina);
-		joaozinho.captura(hooh);
-
-		Treinador lance = new Treinador("Lance");
-		lance.captura(new Pokemon("Dragonite", 50, "Dragao", 17));
-		lance.captura(new Pokemon("Gyarados", 100, "Agua", 18));
-
-		String netoVSash = "Aew, ganhei! Sou mais forte que Ash.";
-		String netoVSlance = "Eu e Lance estamos empatados.";
-		String netoVSjoazinho = "Droga, perdi! Joaozinho Hack eh mais forte!";
-		
-		Assert.assertEquals(netoVSash, neto.lutaContra(ash));
-		Assert.assertEquals(netoVSlance, neto.lutaContra(lance));
-		Assert.assertEquals(netoVSjoazinho, neto.lutaContra(joaozinho));
-		
-	}
-
-	@Test
 	public void testeProva() throws Exception {
-
 		testePasso1();
 		testePasso2e3();
 		testePasso4();
 		testePasso5();
-
-		// testes extras: descomente para verificar sua implementacao.
-		// testeExtraException();
-		// testeExtraMochila();
+		
+		//testes extras: descomente para verificar sua implementacao.
+		//testeExtraException();
+		//testeExtraMochila();
 	}
 
 	private void testePasso1() throws Exception {
@@ -218,25 +190,27 @@ public class TestePokeApp {
 		}
 	}
 	/*
-	 * private void testeExtraMochila() throws Exception {
-	 * neto.adicionaItem("Master Ball", 150.50); neto.adicionaItem("Ultra Ball",
-	 * 75.00); neto.adicionaItem("Revive", 29.90);
-	 * 
-	 * Assert.assertTrue(neto.contemItem("Master Ball"));
-	 * Assert.assertTrue(neto.contemItem("Ultra Ball"));
-	 * Assert.assertFalse(neto.contemItem("Great Ball"));
-	 * Assert.assertFalse(neto.contemItem("Rare Candy"));
-	 * 
-	 * Assert.assertEquals(255.40, neto.lucroTotal(), 0.001);
-	 * Assert.assertEquals(3, neto.getQtdItens());
-	 * 
-	 * Assert.assertTrue(neto.removeItem("Master Ball"));
-	 * Assert.assertFalse(neto.removeItem("Full Restore"));
-	 * 
-	 * Assert.assertFalse(neto.contemItem("Master Ball"));
-	 * Assert.assertTrue(neto.contemItem("Ultra Ball"));
-	 * 
-	 * Assert.assertEquals(104.9, neto.lucroTotal(), 0.001);
-	 * Assert.assertEquals(2, neto.getQtdItens()); }
-	 */
+	
+	private void testeExtraMochila() throws Exception {
+		neto.adicionaItem("Master Ball", 150.50);
+		neto.adicionaItem("Ultra Ball", 75.00);
+		neto.adicionaItem("Revive", 29.90);
+
+		Assert.assertTrue(neto.contemItem("Master Ball"));
+		Assert.assertTrue(neto.contemItem("Ultra Ball"));
+		Assert.assertFalse(neto.contemItem("Great Ball"));
+		Assert.assertFalse(neto.contemItem("Rare Candy"));
+
+		Assert.assertEquals(255.40, neto.lucroTotal(), 0.001);
+		Assert.assertEquals(3, neto.getQtdItens());
+
+		Assert.assertTrue(neto.removeItem("Master Ball"));
+		Assert.assertFalse(neto.removeItem("Full Restore"));
+
+		Assert.assertFalse(neto.contemItem("Master Ball"));
+		Assert.assertTrue(neto.contemItem("Ultra Ball"));
+
+		Assert.assertEquals(104.9, neto.lucroTotal(), 0.001);
+		Assert.assertEquals(2, neto.getQtdItens());
+	}*/
 }
